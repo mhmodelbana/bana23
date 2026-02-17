@@ -194,6 +194,28 @@ footer{
     border-top:1px solid #222;
 }
 
+/* Animations */
+header h1, header p, .btn, .section-title, .about, .skill-card, .project-card{
+    opacity:0;
+    transform:translateY(30px);
+    animation:fadeIn 1s forwards;
+}
+
+header h1{animation-delay:.3s;}
+header p{animation-delay:.6s;}
+.btn{animation-delay:.9s;}
+.section-title{animation-delay:1.2s;}
+.about{animation-delay:1.5s;}
+.skill-card{animation-delay:1.8s;}
+.project-card{animation-delay:2s;}
+
+@keyframes fadeIn{
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
 /* Responsive */
 @media(max-width:768px){
     header h1{
@@ -229,6 +251,17 @@ footer{
         I design and build intelligent systems that solve real-world problems.
         My focus is on clean architecture, scalable solutions, and impactful technology.
     </p>
+</section>
+
+<section id="skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills">
+        <div class="skill-card">Python</div>
+        <div class="skill-card">Machine Learning</div>
+        <div class="skill-card">Flutter</div>
+        <div class="skill-card">Web Development</div>
+        <div class="skill-card">Data Analysis</div>
+    </div>
 </section>
 
 <section id="projects">
